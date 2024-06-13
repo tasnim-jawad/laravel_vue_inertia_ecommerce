@@ -1,18 +1,29 @@
-import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
-import vue from '@vitejs/plugin-vue';
+import { defineConfig } from "vite";
+import laravel from "laravel-vite-plugin";
+import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/js/Frontend/app.js'],
+            input: [
+                "resources/sass/app.scss",
+                "resources/js/backend/app.js",
+                "resources/js/frontend/app.js",
+            ],
             refresh: true,
         }),
-        vue(), // Add the Vue plugin here
+        vue({
+            template: {
+                transformAssetUrls: {
+                    base: null,
+                    includeAbsolute: false,
+                },
+            },
+        }),
     ],
     resolve: {
         alias: {
-            '@': '/resources/js/Frontend', // Update this path according to your project structure
+            vue: "vue/dist/vue.esm-bundler.js",
         },
     },
 });
