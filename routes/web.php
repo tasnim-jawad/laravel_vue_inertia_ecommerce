@@ -30,3 +30,6 @@ Route::get('/contact',function(){
 Route::get('/gallery',function(){
     return Inertia::render('Gallery/Index');
 });
+Route::get('/products',function(){
+    return Inertia::render('Product/Index');
+});

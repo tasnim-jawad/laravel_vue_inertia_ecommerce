@@ -4,6 +4,8 @@ import { createInertiaApp ,Link , Head } from '@inertiajs/vue3'
 import { createPinia } from 'pinia'
 
 import Layout from "./Shared/Layout.vue";
+import ProductCard from "./Pages/Product/Components/ProductCard.vue"
+import ProductCardFlexMini from "./Pages/Product/Components/ProductCardFlexMini.vue"
 
 const pinia = createPinia();
 createInertiaApp({
@@ -20,6 +22,8 @@ createInertiaApp({
           .use(plugin)
           .component("Link", Link)
           .component("Head", Head)
+          .component("ProductCard", ProductCard)
+          .component("ProductCardFlexMini", ProductCardFlexMini)
           .use(pinia)
           .mount(el)
     },     

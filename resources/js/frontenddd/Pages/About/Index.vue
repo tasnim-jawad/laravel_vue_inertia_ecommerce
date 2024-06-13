@@ -1,10 +1,10 @@
 <template>
     <div>
-        <h1>About / index gdefjgdjfksgjks</h1>
+        <h1>About / index hjh</h1>
     </div>
 </template>
 
 <script>
     export default {
     }
-</script>s
+</script>
